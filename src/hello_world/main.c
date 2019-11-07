@@ -27,6 +27,13 @@
 #include "uarths.h"
 #include "mic_array_leds.h"
 #include "gpiohs.h"
+#include "bsp.h"
+#include "dmac.h"
+#include "fpioa.h"
+#include "sdcard.h"
+#include "ff.h"
+#include "plic.h"
+
 
 
 #define FRAME_LEN   128
@@ -136,10 +143,66 @@ void io_mux_init(){
      fpioa_set_function(4, FUNC_GPIOHS4);
 
 
+     // SD CARD INIT
+    fpioa_set_function(29, FUNC_SPI0_SCLK);
+    fpioa_set_function(30, FUNC_SPI0_D0);
+    fpioa_set_function(31, FUNC_SPI0_D1);
+    fpioa_set_function(32, FUNC_GPIOHS7);
+
+    fpioa_set_function(24, FUNC_SPI0_SS3);
 
 
 
 }
+
+
+static int sdcard_init(void)
+{
+    uint8_t status;
+
+    printf("/******************sdcard test*****************/\n");
+    status = sd_init();
+    printf("sd init %d\n", status);
+    if (status != 0)
+    {
+        return status;
+    }
+
+    printf("card info status %d\n", status);
+    printf("CardCapacity:%ld\n", cardinfo.CardCapacity);
+    printf("CardBlockSize:%d\n", cardinfo.CardBlockSize);
+    return 0;
+}
+
+
+
+static int fs_init(void)
+{
+    static FATFS sdcard_fs;
+    FRESULT status;
+    DIR dj;
+    FILINFO fno;
+
+    printf("/********************fs test*******************/\n");
+    status = f_mount(&sdcard_fs, _T("0:"), 1);
+    printf("mount sdcard:%d\n", status);
+    if (status != FR_OK)
+        return status;
+
+    printf("printf filename\n");
+    status = f_findfirst(&dj, &fno, _T("0:"), _T("*"));
+    while (status == FR_OK && fno.fname[0]) {
+        if (fno.fattrib & AM_DIR)
+            printf("dir:%s\n", fno.fname);
+        else
+            printf("file:%s\n", fno.fname);
+        status = f_findnext(&dj, &fno);
+    }
+    f_closedir(&dj);
+    return 0;
+}
+
+
 
 void move_forward() {
      gpiohs_set_pin(1, GPIO_PV_HIGH);
@@ -190,7 +253,8 @@ int main(void)
     sysctl_pll_set_freq(SYSCTL_PLL2, 45158400UL);
     uarths_init();
     io_mux_init();
-
+    plic_init();
+    sysctl_enable_irq();
     /* Prepare GPIO for TB6612 */
 
      gpiohs_set_drive_mode(1, GPIO_DM_OUTPUT);
@@ -203,12 +267,22 @@ int main(void)
      gpiohs_set_pin(3, GPIO_PV_LOW);
      gpiohs_set_pin(4, GPIO_PV_LOW);
 
-
+  if(sdcard_init())
+      {
+          printf("SD card err\n");
+          return -1;
+      }
+      if(fs_init())
+      {
+          printf("FAT32 err\n");
+          return -1;
+      }
 
 
 
     // initialize the LEDs, and set them initially to off
     init_mic_array_lights();
+    printf("Lights initilized\n");
     for (int l=0; l<12; l++) set_light(l, 0, 0, 0);
 
     // initialize all 4 I2S channels, stereo -> 8 microphones
@@ -297,7 +371,7 @@ int main(void)
        }
 
 
-         printf("mB=%d\tmC=%d\tm1=%d\tm2=%d\tm3=%d\tm4=%d\tm5=%d\tm6=%d\t\tx=%f,\ty=%f\tangle=%f\n\r", av[0], av[1], av[2], av[3], av[4], av[5], av[6], av[7], x, y, angle / PI * 180);
+      //   printf("mB=%d\tmC=%d\tm1=%d\tm2=%d\tm3=%d\tm4=%d\tm5=%d\tm6=%d\t\tx=%f,\ty=%f\tangle=%f\n\r", av[0], av[1], av[2], av[3], av[4], av[5], av[6], av[7], x, y, angle / PI * 180);
 
 
 
