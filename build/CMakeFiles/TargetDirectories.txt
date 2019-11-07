@@ -1,6 +1,6 @@
-/Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/CMakeFiles/rebuild_cache.dir
-/Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/CMakeFiles/edit_cache.dir
-/Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/CMakeFiles/hello_world.dir
-/Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/lib/CMakeFiles/rebuild_cache.dir
-/Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/lib/CMakeFiles/edit_cache.dir
-/Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/lib/CMakeFiles/kendryte.dir
+/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/rebuild_cache.dir
+/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/edit_cache.dir
+/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/hello_world.dir
+/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/lib/CMakeFiles/edit_cache.dir
+/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/lib/CMakeFiles/kendryte.dir

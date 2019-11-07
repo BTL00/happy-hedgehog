@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.obj"
+  "CMakeFiles/hello_world.dir/src/hello_world/diskio.c.obj"
+  "CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj"
   "CMakeFiles/hello_world.dir/src/hello_world/main.c.obj"
+  "CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj"
+  "CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj"
   "hello_world.pdb"
   "hello_world"
 )

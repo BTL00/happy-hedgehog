@@ -143,11 +143,13 @@ void io_mux_init(){
      fpioa_set_function(4, FUNC_GPIOHS4);
 
 
-     // SD CARD INIT
-    fpioa_set_function(29, FUNC_SPI0_SCLK);
-    fpioa_set_function(30, FUNC_SPI0_D0);
-    fpioa_set_function(31, FUNC_SPI0_D1);
-    fpioa_set_function(32, FUNC_GPIOHS7);
+     // SD CARD INIT for maix bit
+    fpioa_set_function(27, FUNC_SPI0_SCLK);
+    fpioa_set_function(26, FUNC_SPI0_D1);
+    fpioa_set_function(28, FUNC_SPI0_D0);
+    fpioa_set_function(29, FUNC_GPIOHS7);
+    gpiohs_set_drive_mode(29, GPIO_DM_OUTPUT);
+
 
     fpioa_set_function(24, FUNC_SPI0_SS3);
 
@@ -165,6 +167,8 @@ static int sdcard_init(void)
     printf("sd init %d\n", status);
     if (status != 0)
     {
+          printf("card info status %d\n", status);
+
         return status;
     }
 
@@ -248,7 +252,7 @@ void stop() {
 
 int main(void)
 {
-    sysctl_pll_set_freq(SYSCTL_PLL0, 320000000UL);
+    sysctl_pll_set_freq(SYSCTL_PLL0, 800000000UL);
     sysctl_pll_set_freq(SYSCTL_PLL1, 160000000UL);
     sysctl_pll_set_freq(SYSCTL_PLL2, 45158400UL);
     uarths_init();
@@ -280,6 +284,8 @@ int main(void)
 
 
 
+
+
     // initialize the LEDs, and set them initially to off
     init_mic_array_lights();
     printf("Lights initilized\n");
@@ -299,10 +305,19 @@ int main(void)
     int num_averages = 50;
     float if_samples;
 
-    float x,y,angle = 0;
+    float x,y = 0; //angle
 
     // inverse, float of the number of samples taken
     if_samples = 1./(float)(num_averages * FRAME_LEN);
+
+
+    FIL  file_channel_0;
+ 
+    FRESULT ret = FR_OK;
+    const char *path_0 = "file_channel_0.txt";
+    uint32_t v_ret_len = 0;
+
+
 
     while (1)
     {
@@ -322,11 +337,42 @@ int main(void)
             }
         }
 
+        printf("%lu %u\n", sizeof(rx_buf), (unsigned int)v_ret_len);
+    ret = f_open(&file_channel_0, path_0,  FA_OPEN_APPEND | FA_WRITE | FA_READ);
+             if (ret != FR_OK) {
+              printf("File opening error\n");
+              while(1) {};
+             }else{
+              printf("File sucessfully opened\n");
+             }
+
+            ret = f_write(&file_channel_0, rx_buf, 512, &v_ret_len);
+            if(ret != FR_OK)
+            {
+                printf("Write %s err[%d]\n", path_0, ret);
+            }
+            else
+            {
+                printf("Write %d bytes to %s ok\n", v_ret_len, path_0);
+            }
+    f_close(&file_channel_0);
+
+
+
+
+
         // correct for the number of samples taken
         for (int i=0; i<8; i++) {
             av[i] = (int) ((float)av[i]*if_samples);
             if (av[i]>512) av[i]=512;
         }
+
+
+
+
+
+
+
 
        /* if only noise is present (a low central microphone output), set all array mic averages to 0.
         else subract the central microphone output from the other array mics, and make sure that their 

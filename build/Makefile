@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.11.4/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/pb/Desktop/Riscv/kendryte-standalone-sdk
+CMAKE_SOURCE_DIR = /Users/pb/Desktop/Riscv/happy-hegehog-risc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build
+CMAKE_BINARY_DIR = /Users/pb/Desktop/Riscv/happy-hegehog-risc/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/CMakeFiles /Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pb/Desktop/Riscv/kendryte-standalone-sdk/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -136,6 +136,87 @@ kendryte/fast:
 	$(MAKE) -f lib/CMakeFiles/kendryte.dir/build.make lib/CMakeFiles/kendryte.dir/build
 .PHONY : kendryte/fast
 
+src/hello_world/ccsbcs.obj: src/hello_world/ccsbcs.c.obj
+
+.PHONY : src/hello_world/ccsbcs.obj
+
+# target to build an object file
+src/hello_world/ccsbcs.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.obj
+.PHONY : src/hello_world/ccsbcs.c.obj
+
+src/hello_world/ccsbcs.i: src/hello_world/ccsbcs.c.i
+
+.PHONY : src/hello_world/ccsbcs.i
+
+# target to preprocess a source file
+src/hello_world/ccsbcs.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.i
+.PHONY : src/hello_world/ccsbcs.c.i
+
+src/hello_world/ccsbcs.s: src/hello_world/ccsbcs.c.s
+
+.PHONY : src/hello_world/ccsbcs.s
+
+# target to generate assembly for a file
+src/hello_world/ccsbcs.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.s
+.PHONY : src/hello_world/ccsbcs.c.s
+
+src/hello_world/diskio.obj: src/hello_world/diskio.c.obj
+
+.PHONY : src/hello_world/diskio.obj
+
+# target to build an object file
+src/hello_world/diskio.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/diskio.c.obj
+.PHONY : src/hello_world/diskio.c.obj
+
+src/hello_world/diskio.i: src/hello_world/diskio.c.i
+
+.PHONY : src/hello_world/diskio.i
+
+# target to preprocess a source file
+src/hello_world/diskio.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/diskio.c.i
+.PHONY : src/hello_world/diskio.c.i
+
+src/hello_world/diskio.s: src/hello_world/diskio.c.s
+
+.PHONY : src/hello_world/diskio.s
+
+# target to generate assembly for a file
+src/hello_world/diskio.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/diskio.c.s
+.PHONY : src/hello_world/diskio.c.s
+
+src/hello_world/ff.obj: src/hello_world/ff.c.obj
+
+.PHONY : src/hello_world/ff.obj
+
+# target to build an object file
+src/hello_world/ff.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj
+.PHONY : src/hello_world/ff.c.obj
+
+src/hello_world/ff.i: src/hello_world/ff.c.i
+
+.PHONY : src/hello_world/ff.i
+
+# target to preprocess a source file
+src/hello_world/ff.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/ff.c.i
+.PHONY : src/hello_world/ff.c.i
+
+src/hello_world/ff.s: src/hello_world/ff.c.s
+
+.PHONY : src/hello_world/ff.s
+
+# target to generate assembly for a file
+src/hello_world/ff.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/ff.c.s
+.PHONY : src/hello_world/ff.c.s
+
 src/hello_world/main.obj: src/hello_world/main.c.obj
 
 .PHONY : src/hello_world/main.obj
@@ -163,6 +244,60 @@ src/hello_world/main.c.s:
 	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/main.c.s
 .PHONY : src/hello_world/main.c.s
 
+src/hello_world/sdcard.obj: src/hello_world/sdcard.c.obj
+
+.PHONY : src/hello_world/sdcard.obj
+
+# target to build an object file
+src/hello_world/sdcard.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj
+.PHONY : src/hello_world/sdcard.c.obj
+
+src/hello_world/sdcard.i: src/hello_world/sdcard.c.i
+
+.PHONY : src/hello_world/sdcard.i
+
+# target to preprocess a source file
+src/hello_world/sdcard.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.i
+.PHONY : src/hello_world/sdcard.c.i
+
+src/hello_world/sdcard.s: src/hello_world/sdcard.c.s
+
+.PHONY : src/hello_world/sdcard.s
+
+# target to generate assembly for a file
+src/hello_world/sdcard.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.s
+.PHONY : src/hello_world/sdcard.c.s
+
+src/hello_world/wav_decode.obj: src/hello_world/wav_decode.c.obj
+
+.PHONY : src/hello_world/wav_decode.obj
+
+# target to build an object file
+src/hello_world/wav_decode.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj
+.PHONY : src/hello_world/wav_decode.c.obj
+
+src/hello_world/wav_decode.i: src/hello_world/wav_decode.c.i
+
+.PHONY : src/hello_world/wav_decode.i
+
+# target to preprocess a source file
+src/hello_world/wav_decode.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.i
+.PHONY : src/hello_world/wav_decode.c.i
+
+src/hello_world/wav_decode.s: src/hello_world/wav_decode.c.s
+
+.PHONY : src/hello_world/wav_decode.s
+
+# target to generate assembly for a file
+src/hello_world/wav_decode.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.s
+.PHONY : src/hello_world/wav_decode.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -173,9 +308,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... hello_world"
 	@echo "... kendryte"
+	@echo "... src/hello_world/ccsbcs.obj"
+	@echo "... src/hello_world/ccsbcs.i"
+	@echo "... src/hello_world/ccsbcs.s"
+	@echo "... src/hello_world/diskio.obj"
+	@echo "... src/hello_world/diskio.i"
+	@echo "... src/hello_world/diskio.s"
+	@echo "... src/hello_world/ff.obj"
+	@echo "... src/hello_world/ff.i"
+	@echo "... src/hello_world/ff.s"
 	@echo "... src/hello_world/main.obj"
 	@echo "... src/hello_world/main.i"
 	@echo "... src/hello_world/main.s"
+	@echo "... src/hello_world/sdcard.obj"
+	@echo "... src/hello_world/sdcard.i"
+	@echo "... src/hello_world/sdcard.s"
+	@echo "... src/hello_world/wav_decode.obj"
+	@echo "... src/hello_world/wav_decode.i"
+	@echo "... src/hello_world/wav_decode.s"
 .PHONY : help
 
 
