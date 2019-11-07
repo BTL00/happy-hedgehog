@@ -6,7 +6,7 @@ C_FLAGS =  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstr
 
 C_DEFINES = -DCONFIG_LOG_COLORS -DCONFIG_LOG_ENABLE -DCONFIG_LOG_LEVEL=LOG_VERBOSE -DDEBUG=1 -DLOG_KERNEL -DLV_CONF_INCLUDE_SIMPLE -D__riscv64
 
-C_INCLUDES = -I/Users/pb/Desktop/Riscv/happy-hegehog-risc/lib/bsp/include -I/Users/pb/Desktop/Riscv/happy-hegehog-risc/lib/drivers/include -I/Users/pb/Desktop/Riscv/happy-hegehog-risc/lib/freertos/conf -I/Users/pb/Desktop/Riscv/happy-hegehog-risc/lib/freertos/include -I/Users/pb/Desktop/Riscv/happy-hegehog-risc/lib/freertos/portable -I/Users/pb/Desktop/Riscv/happy-hegehog-risc/lib/utils/include -I/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world 
+C_INCLUDES = -I/Users/pb/Desktop/Riscv/happy-hedgehog/lib/bsp/include -I/Users/pb/Desktop/Riscv/happy-hedgehog/lib/drivers/include -I/Users/pb/Desktop/Riscv/happy-hedgehog/lib/freertos/conf -I/Users/pb/Desktop/Riscv/happy-hedgehog/lib/freertos/include -I/Users/pb/Desktop/Riscv/happy-hedgehog/lib/freertos/portable -I/Users/pb/Desktop/Riscv/happy-hedgehog/lib/utils/include -I/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world 
 
 # Custom flags: lib/CMakeFiles/kendryte.dir/bsp/crt.S.obj_FLAGS = -x assembler-with-cpp -D __riscv64
 

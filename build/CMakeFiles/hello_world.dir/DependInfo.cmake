@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ccsbcs.c" "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.obj"
-  "/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/diskio.c" "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/hello_world.dir/src/hello_world/diskio.c.obj"
-  "/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ff.c" "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj"
-  "/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/main.c" "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/hello_world.dir/src/hello_world/main.c.obj"
-  "/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sdcard.c" "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj"
-  "/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/wav_decode.c" "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ccsbcs.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/diskio.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/diskio.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/main.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/main.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/wav_decode.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -37,7 +37,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/lib/CMakeFiles/kendryte.dir/DependInfo.cmake"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/build/lib/CMakeFiles/kendryte.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

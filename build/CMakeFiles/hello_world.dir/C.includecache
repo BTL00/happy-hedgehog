@@ -136,43 +136,43 @@ platform.h
 plic.h
 ../lib/drivers/include/plic.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ccsbcs.c
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ccsbcs.c
 ff.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ff.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/diskio.c
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/diskio.c
 diskio.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/diskio.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/diskio.h
 sdcard.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sdcard.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/diskio.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/diskio.h
 integer.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/integer.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/integer.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ff.c
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.c
 ff.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ff.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
 diskio.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/diskio.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/diskio.h
 stdarg.h
 -
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ff.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
 integer.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/integer.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/integer.h
 ffconf.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ffconf.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ffconf.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ffconf.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ffconf.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/integer.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/integer.h
 windows.h
 -
 tchar.h
 -
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/main.c
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/main.c
 stdint.h
 -
 stdlib.h
@@ -184,73 +184,73 @@ string.h
 math.h
 -
 i2s.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/i2s.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/i2s.h
 sysctl.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sysctl.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sysctl.h
 fpioa.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/fpioa.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/fpioa.h
 uarths.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/uarths.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/uarths.h
 mic_array_leds.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/mic_array_leds.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/mic_array_leds.h
 gpiohs.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/gpiohs.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/gpiohs.h
 bsp.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/bsp.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/bsp.h
 dmac.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/dmac.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/dmac.h
 fpioa.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/fpioa.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/fpioa.h
 sdcard.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sdcard.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.h
 ff.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ff.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
 plic.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/plic.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/plic.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/mic_array_leds.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/mic_array_leds.h
 unistd.h
 -
 stdio.h
 -
 fpioa.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/fpioa.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/fpioa.h
 sleep.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sleep.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sleep.h
 spi.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/spi.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/spi.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sdcard.c
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.c
 sdcard.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sdcard.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.h
 sysctl.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sysctl.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sysctl.h
 gpiohs.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/gpiohs.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/gpiohs.h
 fpioa.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/fpioa.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/fpioa.h
 dmac.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/dmac.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/dmac.h
 spi.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/spi.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/spi.h
 stdio.h
 -
 gpiohs.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/gpiohs.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/gpiohs.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/sdcard.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.h
 stdint.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/stdint.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/stdint.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/wav_decode.c
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/wav_decode.c
 stdlib.h
 -
 wav_decode.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/wav_decode.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/wav_decode.h
 
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/wav_decode.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/wav_decode.h
 stdint.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/stdint.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/stdint.h
 ff.h
-/Users/pb/Desktop/Riscv/happy-hegehog-risc/src/hello_world/ff.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
 

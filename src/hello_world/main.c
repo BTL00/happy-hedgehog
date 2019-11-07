@@ -151,7 +151,7 @@ void io_mux_init(){
     gpiohs_set_drive_mode(29, GPIO_DM_OUTPUT);
 
 
-    fpioa_set_function(24, FUNC_SPI0_SS3);
+   // fpioa_set_function(29, FUNC_SPI0_SS0);
 
 
 
@@ -257,6 +257,7 @@ int main(void)
     sysctl_pll_set_freq(SYSCTL_PLL2, 45158400UL);
     uarths_init();
     io_mux_init();
+        dmac_init();
     plic_init();
     sysctl_enable_irq();
     /* Prepare GPIO for TB6612 */
@@ -318,7 +319,6 @@ int main(void)
     uint32_t v_ret_len = 0;
 
 
-
     while (1)
     {
         // set averages to zero to start
@@ -337,25 +337,30 @@ int main(void)
             }
         }
 
-        printf("%lu %u\n", sizeof(rx_buf), (unsigned int)v_ret_len);
-    ret = f_open(&file_channel_0, path_0,  FA_OPEN_APPEND | FA_WRITE | FA_READ);
-             if (ret != FR_OK) {
+         ret = f_open(&file_channel_0, path_0,  FA_OPEN_APPEND | FA_WRITE | FA_READ);
+        if (ret != FR_OK) {
               printf("File opening error\n");
               while(1) {};
              }else{
               printf("File sucessfully opened\n");
              }
 
-            ret = f_write(&file_channel_0, rx_buf, 512, &v_ret_len);
+            for (int nm = 0; nm < 1024; nm++)
+            {
+              ret = f_write(&file_channel_0,  (void *) rx_buf, sizeof(rx_buf), &v_ret_len);
             if(ret != FR_OK)
             {
                 printf("Write %s err[%d]\n", path_0, ret);
+                while(1) {};
             }
             else
             {
                 printf("Write %d bytes to %s ok\n", v_ret_len, path_0);
             }
-    f_close(&file_channel_0);
+            
+            }
+        f_close(&file_channel_0);
+
 
 
 
@@ -430,5 +435,6 @@ int main(void)
         set_light(2, av[7], av[7], av[7]);
         write_pixels();
     }
+
     return 0;
 }

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/pb/Desktop/Riscv/happy-hegehog-risc/lib
+# Install script for directory: /Users/pb/Desktop/Riscv/happy-hedgehog/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

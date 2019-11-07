@@ -11,7 +11,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/3.11.4/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/3.11.4/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/local/riscv/bin/riscv64-unknown-elf-g++ 
@@ -24,18 +24,18 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/3.11.4/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/3.11.4/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bcbb8/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_bcbb8.dir/build.make CMakeFiles/cmTC_bcbb8.dir/build
-Building C object CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -o CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj   -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_bcbb8
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcbb8.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -v CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj  -o cmTC_bcbb8 
+Run Build Command:"/usr/bin/make" "cmTC_21772/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_21772.dir/build.make CMakeFiles/cmTC_21772.dir/build
+Building C object CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -o CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj   -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_21772
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21772.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -v CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj  -o cmTC_21772 
 Using built-in specs.
 COLLECT_GCC=/usr/local/riscv/bin/riscv64-unknown-elf-gcc
 COLLECT_LTO_WRAPPER=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper
@@ -45,22 +45,22 @@ Thread model: single
 gcc version 8.2.0 (GCC) 
 COMPILER_PATH=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/bin/
 LIBRARY_PATH=/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/:/usr/local/riscv/riscv64-unknown-elf/lib/
-COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu11' '-Wno-pointer-to-int-cast' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-Wno-old-style-declaration' '-v' '-o' 'cmTC_bcbb8' '-march=rv64imafdc' '-mabi=lp64d'
- /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccDgoAkQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_bcbb8 /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu11' '-Wno-pointer-to-int-cast' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-Wno-old-style-declaration' '-v' '-o' 'cmTC_bcbb8' '-march=rv64imafdc' '-mabi=lp64d'
+COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu11' '-Wno-pointer-to-int-cast' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-Wno-old-style-declaration' '-v' '-o' 'cmTC_21772' '-march=rv64imafdc' '-mabi=lp64d'
+ /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccsYjKfK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_21772 /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu11' '-Wno-pointer-to-int-cast' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-Wno-old-style-declaration' '-v' '-o' 'cmTC_21772' '-march=rv64imafdc' '-mabi=lp64d'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(riscv64-unknown-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_bcbb8/fast"]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_bcbb8.dir/build.make CMakeFiles/cmTC_bcbb8.dir/build]
-  ignore line: [Building C object CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -o CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj   -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_bcbb8]
-  ignore line: [/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcbb8.dir/link.txt --verbose=1]
-  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -v CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj  -o cmTC_bcbb8 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_21772/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_21772.dir/build.make CMakeFiles/cmTC_21772.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -o CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj   -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_21772]
+  ignore line: [/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21772.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -v CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj  -o cmTC_21772 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/local/riscv/bin/riscv64-unknown-elf-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper]
@@ -70,13 +70,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 8.2.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/bin/]
   ignore line: [LIBRARY_PATH=/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/:/usr/local/riscv/riscv64-unknown-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu11' '-Wno-pointer-to-int-cast' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-Wno-old-style-declaration' '-v' '-o' 'cmTC_bcbb8' '-march=rv64imafdc' '-mabi=lp64d']
-  link line: [ /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccDgoAkQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_bcbb8 /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu11' '-Wno-pointer-to-int-cast' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-Wno-old-style-declaration' '-v' '-o' 'cmTC_21772' '-march=rv64imafdc' '-mabi=lp64d']
+  link line: [ /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccsYjKfK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_21772 /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o]
     arg [/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccDgoAkQ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccsYjKfK.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
@@ -84,13 +84,13 @@ Parsed C implicit link information from above output:
     arg [--sysroot=/usr/local/riscv/riscv64-unknown-elf] ==> ignore
     arg [-melf64lriscv] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_bcbb8] ==> ignore
+    arg [cmTC_21772] ==> ignore
     arg [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o] ==> ignore
     arg [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o] ==> ignore
     arg [-L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0] ==> dir [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0]
     arg [-L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib] ==> dir [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib]
     arg [-L/usr/local/riscv/riscv64-unknown-elf/lib] ==> dir [/usr/local/riscv/riscv64-unknown-elf/lib]
-    arg [CMakeFiles/cmTC_bcbb8.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [CMakeFiles/cmTC_21772.dir/CMakeCCompilerABI.c.obj] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--start-group] ==> ignore
     arg [-lc] ==> lib [c]
@@ -109,15 +109,15 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5665c/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_5665c.dir/build.make CMakeFiles/cmTC_5665c.dir/build
-Building C object CMakeFiles/cmTC_5665c.dir/feature_tests.c.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -std=c11 -o CMakeFiles/cmTC_5665c.dir/feature_tests.c.obj   -c /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_5665c
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5665c.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration     CMakeFiles/cmTC_5665c.dir/feature_tests.c.obj  -o cmTC_5665c 
+Run Build Command:"/usr/bin/make" "cmTC_aabe9/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_aabe9.dir/build.make CMakeFiles/cmTC_aabe9.dir/build
+Building C object CMakeFiles/cmTC_aabe9.dir/feature_tests.c.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -std=c11 -o CMakeFiles/cmTC_aabe9.dir/feature_tests.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_aabe9
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aabe9.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration     CMakeFiles/cmTC_aabe9.dir/feature_tests.c.obj  -o cmTC_aabe9 
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -127,15 +127,15 @@ Linking C executable cmTC_5665c
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cf42b/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_cf42b.dir/build.make CMakeFiles/cmTC_cf42b.dir/build
-Building C object CMakeFiles/cmTC_cf42b.dir/feature_tests.c.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -std=c99 -o CMakeFiles/cmTC_cf42b.dir/feature_tests.c.obj   -c /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_cf42b
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf42b.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration     CMakeFiles/cmTC_cf42b.dir/feature_tests.c.obj  -o cmTC_cf42b 
+Run Build Command:"/usr/bin/make" "cmTC_3398a/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_3398a.dir/build.make CMakeFiles/cmTC_3398a.dir/build
+Building C object CMakeFiles/cmTC_3398a.dir/feature_tests.c.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -std=c99 -o CMakeFiles/cmTC_3398a.dir/feature_tests.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3398a
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3398a.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration     CMakeFiles/cmTC_3398a.dir/feature_tests.c.obj  -o cmTC_3398a 
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -145,15 +145,15 @@ Linking C executable cmTC_cf42b
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_25116/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_25116.dir/build.make CMakeFiles/cmTC_25116.dir/build
-Building C object CMakeFiles/cmTC_25116.dir/feature_tests.c.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -std=c90 -o CMakeFiles/cmTC_25116.dir/feature_tests.c.obj   -c /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_25116
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25116.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration     CMakeFiles/cmTC_25116.dir/feature_tests.c.obj  -o cmTC_25116 
+Run Build Command:"/usr/bin/make" "cmTC_dcb35/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_dcb35.dir/build.make CMakeFiles/cmTC_dcb35.dir/build
+Building C object CMakeFiles/cmTC_dcb35.dir/feature_tests.c.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration    -std=c90 -o CMakeFiles/cmTC_dcb35.dir/feature_tests.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dcb35
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dcb35.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-gcc  -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu11 -Wno-pointer-to-int-cast -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast -Wno-old-style-declaration     CMakeFiles/cmTC_dcb35.dir/feature_tests.c.obj  -o cmTC_dcb35 
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -161,15 +161,15 @@ Linking C executable cmTC_25116
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_899a3/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_899a3.dir/build.make CMakeFiles/cmTC_899a3.dir/build
-Building CXX object CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -o CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_899a3
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_899a3.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -v CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTC_899a3 
+Run Build Command:"/usr/bin/make" "cmTC_f276e/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_f276e.dir/build.make CMakeFiles/cmTC_f276e.dir/build
+Building CXX object CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -o CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_f276e
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f276e.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -v CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTC_f276e 
 Using built-in specs.
 COLLECT_GCC=/usr/local/riscv/bin/riscv64-unknown-elf-g++
 COLLECT_LTO_WRAPPER=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper
@@ -179,22 +179,22 @@ Thread model: single
 gcc version 8.2.0 (GCC) 
 COMPILER_PATH=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/bin/
 LIBRARY_PATH=/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/:/usr/local/riscv/riscv64-unknown-elf/lib/
-COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu++17' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-v' '-o' 'cmTC_899a3' '-march=rv64imafdc' '-mabi=lp64d'
- /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccNXzVvP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_899a3 /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu++17' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-v' '-o' 'cmTC_899a3' '-march=rv64imafdc' '-mabi=lp64d'
+COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu++17' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-v' '-o' 'cmTC_f276e' '-march=rv64imafdc' '-mabi=lp64d'
+ /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//cccLoQHa.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_f276e /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu++17' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-v' '-o' 'cmTC_f276e' '-march=rv64imafdc' '-mabi=lp64d'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(riscv64-unknown-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_899a3/fast"]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_899a3.dir/build.make CMakeFiles/cmTC_899a3.dir/build]
-  ignore line: [Building CXX object CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -o CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_899a3]
-  ignore line: [/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_899a3.dir/link.txt --verbose=1]
-  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -v CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTC_899a3 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f276e/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_f276e.dir/build.make CMakeFiles/cmTC_f276e.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -o CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/Cellar/cmake/3.11.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_f276e]
+  ignore line: [/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f276e.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -v CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTC_f276e ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/local/riscv/bin/riscv64-unknown-elf-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper]
@@ -204,13 +204,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 8.2.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/bin/]
   ignore line: [LIBRARY_PATH=/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/:/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/:/usr/local/riscv/riscv64-unknown-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu++17' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-v' '-o' 'cmTC_899a3' '-march=rv64imafdc' '-mabi=lp64d']
-  link line: [ /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccNXzVvP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_899a3 /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcmodel=medany' '-fno-common' '-ffunction-sections' '-fdata-sections' '-fstrict-volatile-bitfields' '-fno-zero-initialized-in-bss' '-Os' '-ggdb' '-std=gnu++17' '-Wall' '-Werror=all' '-Wno-error=unused-function' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-variable' '-Wno-error=deprecated-declarations' '-Wextra' '-Werror=frame-larger-than=65536' '-Wno-unused-parameter' '-Wno-sign-compare' '-Wno-error=missing-braces' '-Wno-error=return-type' '-Wno-error=pointer-sign' '-Wno-missing-braces' '-Wno-strict-aliasing' '-Wimplicit-fallthrough=0' '-Wno-missing-field-initializers' '-Wno-int-to-pointer-cast' '-v' '-o' 'cmTC_f276e' '-march=rv64imafdc' '-mabi=lp64d']
+  link line: [ /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2 -plugin /usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so -plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//cccLoQHa.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/riscv/riscv64-unknown-elf -melf64lriscv -o cmTC_f276e /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0 -L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib -L/usr/local/riscv/riscv64-unknown-elf/lib CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtend.o]
     arg [/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/local/riscv/libexec/gcc/riscv64-unknown-elf/8.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//ccNXzVvP.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/yg/3l6vbnq90tsfc86r721l2bl00000gn/T//cccLoQHa.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
@@ -218,13 +218,13 @@ Parsed CXX implicit link information from above output:
     arg [--sysroot=/usr/local/riscv/riscv64-unknown-elf] ==> ignore
     arg [-melf64lriscv] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_899a3] ==> ignore
+    arg [cmTC_f276e] ==> ignore
     arg [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib/crt0.o] ==> ignore
     arg [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/crtbegin.o] ==> ignore
     arg [-L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0] ==> dir [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0]
     arg [-L/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib] ==> dir [/usr/local/riscv/lib/gcc/riscv64-unknown-elf/8.2.0/../../../../riscv64-unknown-elf/lib]
     arg [-L/usr/local/riscv/riscv64-unknown-elf/lib] ==> dir [/usr/local/riscv/riscv64-unknown-elf/lib]
-    arg [CMakeFiles/cmTC_899a3.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [CMakeFiles/cmTC_f276e.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc] ==> lib [gcc]
@@ -245,15 +245,15 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7a368/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_7a368.dir/build.make CMakeFiles/cmTC_7a368.dir/build
-Building CXX object CMakeFiles/cmTC_7a368.dir/feature_tests.cxx.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++1z -o CMakeFiles/cmTC_7a368.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_7a368
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a368.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_7a368.dir/feature_tests.cxx.obj  -o cmTC_7a368 
+Run Build Command:"/usr/bin/make" "cmTC_75f79/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_75f79.dir/build.make CMakeFiles/cmTC_75f79.dir/build
+Building CXX object CMakeFiles/cmTC_75f79.dir/feature_tests.cxx.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++1z -o CMakeFiles/cmTC_75f79.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_75f79
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75f79.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_75f79.dir/feature_tests.cxx.obj  -o cmTC_75f79 
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -316,15 +316,15 @@ Linking CXX executable cmTC_7a368
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_45cda/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_45cda.dir/build.make CMakeFiles/cmTC_45cda.dir/build
-Building CXX object CMakeFiles/cmTC_45cda.dir/feature_tests.cxx.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++14 -o CMakeFiles/cmTC_45cda.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_45cda
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45cda.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_45cda.dir/feature_tests.cxx.obj  -o cmTC_45cda 
+Run Build Command:"/usr/bin/make" "cmTC_827ca/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_827ca.dir/build.make CMakeFiles/cmTC_827ca.dir/build
+Building CXX object CMakeFiles/cmTC_827ca.dir/feature_tests.cxx.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++14 -o CMakeFiles/cmTC_827ca.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_827ca
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_827ca.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_827ca.dir/feature_tests.cxx.obj  -o cmTC_827ca 
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -387,15 +387,15 @@ Linking CXX executable cmTC_45cda
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0beb4/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_0beb4.dir/build.make CMakeFiles/cmTC_0beb4.dir/build
-Building CXX object CMakeFiles/cmTC_0beb4.dir/feature_tests.cxx.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++11 -o CMakeFiles/cmTC_0beb4.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_0beb4
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0beb4.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_0beb4.dir/feature_tests.cxx.obj  -o cmTC_0beb4 
+Run Build Command:"/usr/bin/make" "cmTC_5c57c/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_5c57c.dir/build.make CMakeFiles/cmTC_5c57c.dir/build
+Building CXX object CMakeFiles/cmTC_5c57c.dir/feature_tests.cxx.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++11 -o CMakeFiles/cmTC_5c57c.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5c57c
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c57c.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_5c57c.dir/feature_tests.cxx.obj  -o cmTC_5c57c 
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -458,15 +458,15 @@ Linking CXX executable cmTC_0beb4
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c130e/fast"
-/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_c130e.dir/build.make CMakeFiles/cmTC_c130e.dir/build
-Building CXX object CMakeFiles/cmTC_c130e.dir/feature_tests.cxx.obj
-/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++98 -o CMakeFiles/cmTC_c130e.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hegehog-risc/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c130e
-/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c130e.dir/link.txt --verbose=1
-/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_c130e.dir/feature_tests.cxx.obj  -o cmTC_c130e 
+Run Build Command:"/usr/bin/make" "cmTC_73234/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_73234.dir/build.make CMakeFiles/cmTC_73234.dir/build
+Building CXX object CMakeFiles/cmTC_73234.dir/feature_tests.cxx.obj
+/usr/local/riscv/bin/riscv64-unknown-elf-g++    -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast    -std=c++98 -o CMakeFiles/cmTC_73234.dir/feature_tests.cxx.obj -c /Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_73234
+/usr/local/Cellar/cmake/3.11.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73234.dir/link.txt --verbose=1
+/usr/local/riscv/bin/riscv64-unknown-elf-g++   -mcmodel=medany -fno-common -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -fno-zero-initialized-in-bss -Os -ggdb -std=gnu++17 -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Werror=frame-larger-than=65536 -Wno-unused-parameter -Wno-sign-compare -Wno-error=missing-braces -Wno-error=return-type -Wno-error=pointer-sign -Wno-missing-braces -Wno-strict-aliasing -Wno-implicit-fallthrough -Wno-missing-field-initializers -Wno-int-to-pointer-cast     CMakeFiles/cmTC_73234.dir/feature_tests.cxx.obj  -o cmTC_73234 
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

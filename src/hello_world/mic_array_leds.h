@@ -38,19 +38,19 @@ void write_pixels()
     for (int i=0; i<4; i++) tx_buffer[tx_place+i] = 255; 
 
     // send the data to the mic array
-    spi_send_data_standard(0, 0, NULL, 0, tx_buffer, TX_LEN);
+    spi_send_data_standard(1, 0, NULL, 0, tx_buffer, TX_LEN);
 }
 
 
 void init_mic_array_lights(void) 
 {
     // data pin
-    fpioa_set_function(24, FUNC_SPI0_D0); //MOSI
+    fpioa_set_function(24, FUNC_SPI1_D0); //MOSI
     // clock pin
-    fpioa_set_function(25, FUNC_SPI0_SCLK); //CLK
+    fpioa_set_function(25, FUNC_SPI1_SCLK); //CLK
     // init SPI
-    spi_init(0, SPI_WORK_MODE_0, SPI_FF_STANDARD, 8, 0);
-    spi_set_clk_rate(0, 10000000);
+    spi_init(1, SPI_WORK_MODE_0, SPI_FF_STANDARD, 8, 0);
+    spi_set_clk_rate(1, 10000000);
 
     // set the overall brighness factor
     brightness = 5;
