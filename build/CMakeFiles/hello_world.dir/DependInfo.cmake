@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/diskio.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/diskio.c.obj"
   "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj"
   "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/main.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/main.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/movement.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj"
   "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj"
+  "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/supplementary.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj"
   "/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/wav_decode.c" "/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

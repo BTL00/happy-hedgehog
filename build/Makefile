@@ -244,6 +244,33 @@ src/hello_world/main.c.s:
 	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/main.c.s
 .PHONY : src/hello_world/main.c.s
 
+src/hello_world/movement.obj: src/hello_world/movement.c.obj
+
+.PHONY : src/hello_world/movement.obj
+
+# target to build an object file
+src/hello_world/movement.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj
+.PHONY : src/hello_world/movement.c.obj
+
+src/hello_world/movement.i: src/hello_world/movement.c.i
+
+.PHONY : src/hello_world/movement.i
+
+# target to preprocess a source file
+src/hello_world/movement.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/movement.c.i
+.PHONY : src/hello_world/movement.c.i
+
+src/hello_world/movement.s: src/hello_world/movement.c.s
+
+.PHONY : src/hello_world/movement.s
+
+# target to generate assembly for a file
+src/hello_world/movement.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/movement.c.s
+.PHONY : src/hello_world/movement.c.s
+
 src/hello_world/sdcard.obj: src/hello_world/sdcard.c.obj
 
 .PHONY : src/hello_world/sdcard.obj
@@ -270,6 +297,33 @@ src/hello_world/sdcard.s: src/hello_world/sdcard.c.s
 src/hello_world/sdcard.c.s:
 	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.s
 .PHONY : src/hello_world/sdcard.c.s
+
+src/hello_world/supplementary.obj: src/hello_world/supplementary.c.obj
+
+.PHONY : src/hello_world/supplementary.obj
+
+# target to build an object file
+src/hello_world/supplementary.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj
+.PHONY : src/hello_world/supplementary.c.obj
+
+src/hello_world/supplementary.i: src/hello_world/supplementary.c.i
+
+.PHONY : src/hello_world/supplementary.i
+
+# target to preprocess a source file
+src/hello_world/supplementary.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.i
+.PHONY : src/hello_world/supplementary.c.i
+
+src/hello_world/supplementary.s: src/hello_world/supplementary.c.s
+
+.PHONY : src/hello_world/supplementary.s
+
+# target to generate assembly for a file
+src/hello_world/supplementary.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.s
+.PHONY : src/hello_world/supplementary.c.s
 
 src/hello_world/wav_decode.obj: src/hello_world/wav_decode.c.obj
 
@@ -320,9 +374,15 @@ help:
 	@echo "... src/hello_world/main.obj"
 	@echo "... src/hello_world/main.i"
 	@echo "... src/hello_world/main.s"
+	@echo "... src/hello_world/movement.obj"
+	@echo "... src/hello_world/movement.i"
+	@echo "... src/hello_world/movement.s"
 	@echo "... src/hello_world/sdcard.obj"
 	@echo "... src/hello_world/sdcard.i"
 	@echo "... src/hello_world/sdcard.s"
+	@echo "... src/hello_world/supplementary.obj"
+	@echo "... src/hello_world/supplementary.i"
+	@echo "... src/hello_world/supplementary.s"
 	@echo "... src/hello_world/wav_decode.obj"
 	@echo "... src/hello_world/wav_decode.i"
 	@echo "... src/hello_world/wav_decode.s"
