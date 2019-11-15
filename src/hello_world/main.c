@@ -36,7 +36,7 @@
 
 
 
-#define FRAME_LEN   128
+#define FRAME_LEN   32768
 #define PI 3.14159265
 
 
@@ -90,7 +90,8 @@ float icos(long x)
 
 
 
-uint32_t rx_buf[1024];
+uint32_t rx_buf[262144];
+int16_t file_buf[262144];
 
 /* microphones on the array (silk screen readable, flex flat cable behind mic 4 and LED 6):
 
@@ -151,11 +152,42 @@ void io_mux_init(){
     gpiohs_set_drive_mode(29, GPIO_DM_OUTPUT);
 
 
+    fpioa_set_function(12, FUNC_GPIOHS10);
+     gpiohs_set_drive_mode(10, GPIO_DM_OUTPUT);
+
+    fpioa_set_function(13, FUNC_GPIOHS9);
+     gpiohs_set_drive_mode(9, GPIO_DM_OUTPUT);
+
+
    // fpioa_set_function(29, FUNC_SPI0_SS0);
 
 
 
 }
+
+
+
+
+
+struct soundhdr {
+  char  riff[4];        /* "RIFF"                                  */
+  long  flength;        /* file length in bytes                    */
+  char  wave[4];        /* "WAVE"                                  */
+  char  fmt[4];         /* "fmt "                                  */
+  long  chunk_size;     /* size of FMT chunk in bytes (usually 16) */
+  short format_tag;     /* 1=PCM, 257=Mu-Law, 258=A-Law, 259=ADPCM */
+  short num_chans;      /* 1=mono, 2=stereo                        */
+  long  srate;          /* Sampling rate in samples per second     */
+  long  bytes_per_sec;  /* bytes per second = srate*bytes_per_samp */
+  short bytes_per_samp; /* 2=16-bit mono, 4=16-bit stereo          */
+  short bits_per_samp;  /* Number of bits per sample               */
+  char  data[4];        /* "data"                                  */
+  long  dlength;        /* data length in bytes (filelength - 44)  */
+} wavh;
+
+// ......
+
+
 
 
 static int sdcard_init(void)
@@ -254,7 +286,7 @@ int main(void)
 {
     sysctl_pll_set_freq(SYSCTL_PLL0, 800000000UL);
     sysctl_pll_set_freq(SYSCTL_PLL1, 160000000UL);
-    sysctl_pll_set_freq(SYSCTL_PLL2, 45158400UL);
+    sysctl_pll_set_freq(SYSCTL_PLL2, 45158400UL); //has to be compatible with 44100
     uarths_init();
     io_mux_init();
         dmac_init();
@@ -301,6 +333,8 @@ int main(void)
     i2s_rx_channel_config(I2S_DEVICE_0, I2S_CHANNEL_2, RESOLUTION_16_BIT, SCLK_CYCLES_32, TRIGGER_LEVEL_4, STANDARD_MODE);
     i2s_rx_channel_config(I2S_DEVICE_0, I2S_CHANNEL_3, RESOLUTION_16_BIT, SCLK_CYCLES_32, TRIGGER_LEVEL_4, STANDARD_MODE);
 
+    i2s_set_sample_rate(I2S_DEVICE_0, 44100);
+
     // some variables for taking averages
     int32_t av[8]; 
     int num_averages = 50;
@@ -312,54 +346,95 @@ int main(void)
     if_samples = 1./(float)(num_averages * FRAME_LEN);
 
 
+ /* */
+
+
+
+                   gpiohs_set_pin(10, GPIO_PV_LOW);
+                   gpiohs_set_pin(9, GPIO_PV_LOW);
+
+
+
     FIL  file_channel_0;
  
     FRESULT ret = FR_OK;
     const char *path_0 = "file_channel_0.txt";
     uint32_t v_ret_len = 0;
 
+    sleep(2);
+
+
+
+               ret = f_open(&file_channel_0, path_0,  FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+              if (ret != FR_OK) {
+                    printf("File opening error\n");
+                    while(1) {};
+                   }else{
+                    printf("File sucessfully opened\n");
+                   }
+
+                    ret = f_write(&file_channel_0,  (void *) bomba_header, sizeof(bomba_header), &v_ret_len);
+                    f_sync(&file_channel_0);
 
     while (1)
     {
         // set averages to zero to start
         for (int i=0; i<8; i++) av[i] = 0;
+            // read the data 
+            
+
+
+
 
         // for take num_averages samples (of FRAME_LEN samples each)
-        for (int a=0; a<num_averages; a++) {
-            // read the data 
-            i2s_receive_data_dma(I2S_DEVICE_0, &rx_buf[0], FRAME_LEN * 8, DMAC_CHANNEL1);
-            
-            // read the samples of the 8 mics from the rx_buffer
-            for (int f=0; f<FRAME_LEN; f++) {
-                for (int i=0; i<8; i++) {
-                    av[i] += abs(rx_buf[8*f+i]);
-                }
-            }
-        }
+        // for (int a=0; a<num_averages; a++) {
+        //     // read the samples of the 8 mics from the rx_buffer
 
-         ret = f_open(&file_channel_0, path_0,  FA_OPEN_APPEND | FA_WRITE | FA_READ);
-        if (ret != FR_OK) {
-              printf("File opening error\n");
-              while(1) {};
-             }else{
-              printf("File sucessfully opened\n");
-             }
+        //     for (int f=0; f<FRAME_LEN; f++) {
+        //         for (int i=0; i<8; i++) {
+        //             av[i] += abs(rx_buf[8*f+i]);
+        //         }
 
-            for (int nm = 0; nm < 1024; nm++)
-            {
-              ret = f_write(&file_channel_0,  (void *) rx_buf, sizeof(rx_buf), &v_ret_len);
-            if(ret != FR_OK)
-            {
-                printf("Write %s err[%d]\n", path_0, ret);
-                while(1) {};
-            }
-            else
-            {
-                printf("Write %d bytes to %s ok\n", v_ret_len, path_0);
-            }
-            
-            }
-        f_close(&file_channel_0);
+
+        //     }
+        // }
+
+                  gpiohs_set_pin(9, GPIO_PV_LOW);
+
+                  i2s_receive_data_dma(I2S_DEVICE_0, &rx_buf[0], FRAME_LEN * 8, DMAC_CHANNEL1);
+
+                   gpiohs_set_pin(9, GPIO_PV_HIGH);
+
+                   for (int i = 0; i < FRAME_LEN * 8; ++i)
+                   {
+                    file_buf[i] = (int16_t) (rx_buf[i] >> 16);
+                   }
+
+
+
+
+                   gpiohs_set_pin(10, GPIO_PV_LOW);
+
+
+
+
+
+                   // for (int buff_counter = 0 )
+                    ret = f_write(&file_channel_0,  (void *) file_buf, sizeof(file_buf), &v_ret_len);
+                    f_sync(&file_channel_0);
+                  if(ret != FR_OK)
+                  {
+                      printf("Write %s err[%d]\n", path_0, ret);
+                      while(1) {};
+                  }
+                  else
+                  {
+                      printf("Write %d bytes to %s ok\n", v_ret_len, path_0);
+                  }
+
+                  
+                  //}
+                                 gpiohs_set_pin(10, GPIO_PV_HIGH);
 
 
 
@@ -427,14 +502,15 @@ int main(void)
 
 
         // set the LEDs to white with brightness according to their average microphone output
-        set_light(8, av[2], av[2], av[2]);
-        set_light(10, av[3], av[3], av[3]);
-        set_light(6, av[4], av[4], av[4]);
-        set_light(4, av[5], av[5], av[5]);
-        set_light(0, av[6], av[6], av[6]);
-        set_light(2, av[7], av[7], av[7]);
-        write_pixels();
+        // set_light(8, av[2], av[2], av[2]);
+        // set_light(10, av[3], av[3], av[3]);
+        // set_light(6, av[4], av[4], av[4]);
+        // set_light(4, av[5], av[5], av[5]);
+        // set_light(0, av[6], av[6], av[6]);
+        // set_light(2, av[7], av[7], av[7]);
+        // write_pixels();
     }
+              f_close(&file_channel_0);
 
     return 0;
 }
