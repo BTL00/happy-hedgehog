@@ -1,0 +1,6 @@
+/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/rebuild_cache.dir
+/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/edit_cache.dir
+/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles/hello_world.dir
+/Users/pb/Desktop/Riscv/happy-hedgehog/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/pb/Desktop/Riscv/happy-hedgehog/build/lib/CMakeFiles/edit_cache.dir
+/Users/pb/Desktop/Riscv/happy-hedgehog/build/lib/CMakeFiles/kendryte.dir

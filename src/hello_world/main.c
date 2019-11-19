@@ -36,13 +36,15 @@
 #include "supplementary.h" //my file
 
 
-#define FRAME_LEN   32768
+#define FRAME_LEN   4096
+#define BUFFER_LEN 32768
 #define PI 3.14159265
 
 
 
-uint32_t rx_buf[262144];
-int16_t file_buf[262144];
+uint32_t rx_buf_0[32768];
+uint32_t rx_buf_1[32768];
+
 
 
 
@@ -80,6 +82,108 @@ void io_mux_init(){   // assign functions to pins
 
 }
 
+
+float rmsValue(uint32_t arr[], uint32_t n, uint32_t nth) 
+{ 
+    uint32_t square = 0; 
+    uint32_t buff = 0;
+    float mean = 0.0, root = 0.0; 
+  
+    // Calculate square. 
+    for (int i = nth; i < n; i+=8) { 
+      buff = arr[i] / 0xFFFF;
+        square += buff * buff;
+    } 
+  
+    // Calculate Mean. 
+    mean = (square / (float)(n)); 
+  
+    // Calculate Root. 
+    root = sqrt(mean); 
+  
+    return root; 
+} 
+
+
+
+bool buffer_0_to_be_saved = 0;
+bool buffer_1_to_be_saved = 0;
+
+bool buffer_0_saving = 0;
+bool buffer_1_saving = 0;
+
+int buffer_last_used = 0;
+
+
+
+
+
+
+
+int core1_function(void * ctx) {
+
+    FIL  file_channel_0;
+
+    FRESULT ret = FR_OK;
+    const char *path_0 = "file_channel_0.txt";
+    uint32_t v_ret_len = 0;
+
+    ret = f_open(&file_channel_0, path_0,  FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+    if (ret != FR_OK) {
+      printf("File opening error\n");
+      while(1) {};
+    }else{
+      printf("File sucessfully opened\n");
+    }
+    int save_counter = 0;
+
+
+    while(1) {
+
+
+                  if(buffer_0_to_be_saved) {
+                    printf("saving buffer 0\n");
+                   buffer_0_saving = 1; 
+                                                                            gpiohs_set_pin(10, GPIO_PV_LOW);
+
+                   ret = f_write(&file_channel_0,  (void *) rx_buf_0, sizeof(rx_buf_0), &v_ret_len);
+                  if(save_counter % 32  == 0) {
+                    f_sync(&file_channel_0);
+                  }
+                  save_counter++;
+                   buffer_0_saving = 0;
+                   buffer_0_to_be_saved = 0; 
+                                     gpiohs_set_pin(10, GPIO_PV_HIGH);
+
+                  }else if(buffer_1_to_be_saved) {
+                                        printf("saving buffer 1\n");
+
+                   buffer_1_saving = 1; 
+                    gpiohs_set_pin(10, GPIO_PV_LOW);
+
+                  ret = f_write(&file_channel_0,  (void *) rx_buf_1, sizeof(rx_buf_1), &v_ret_len);
+                  if(save_counter % 32  == 0) {
+                    f_sync(&file_channel_0);
+                  }
+                  save_counter++;
+                   buffer_1_saving = 0;
+                   buffer_1_to_be_saved = 0; 
+                                                        gpiohs_set_pin(10, GPIO_PV_HIGH);
+
+                  }else{
+                                        f_sync(&file_channel_0);
+
+                  }
+
+
+
+
+    }
+                  f_close(&file_channel_0);
+
+return 0;
+
+}
 
 
 
@@ -142,16 +246,19 @@ int main(void)
 
 
     // some variables for taking averages
-    int32_t av[8]; 
-    int num_averages = 50;
-    float if_samples;
-    float x,y = 0; //angle
+    float av[8]; 
+    // int num_averages = 50;
+    // float if_samples;
+    float x,y,angle; //angle
 
     // inverse, float of the number of samples taken
-    if_samples = 1./(float)(num_averages * FRAME_LEN);
+    // if_samples = 1./(float)(num_averages * FRAME_LEN);
 
 
  /* */
+
+
+
 
 
 
@@ -160,110 +267,83 @@ int main(void)
 
 
 
-    FIL  file_channel_0;
 
-    FRESULT ret = FR_OK;
-    const char *path_0 = "file_channel_0.txt";
-    uint32_t v_ret_len = 0;
+    // uint32_t a;
+    // int32_t b;
+    // int16_t c;
 
     sleep(2); //wait before starting work
 
+    register_core1(core1_function, NULL);
 
 
-    ret = f_open(&file_channel_0, path_0,  FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
-    if (ret != FR_OK) {
-      printf("File opening error\n");
-      while(1) {};
-    }else{
-      printf("File sucessfully opened\n");
-    }
+
 
     while (1)
     {
+
+
         // set averages to zero to start
       for (int i=0; i<8; i++) av[i] = 0;
 
 
-
-
-
         // for take num_averages samples (of FRAME_LEN samples each)
-         for (int a=0; a<num_averages; a++) {
+    //     for (int a=0; a<num_averages; a++) {
              // read the samples of the 8 mics from the rx_buffer
 
-             for (int f=0; f<FRAME_LEN; f++) {
+      //       for (int f=0; f<FRAME_LEN; f++) {
                  for (int i=0; i<8; i++) {
-                     av[i] += abs(rx_buf[8*f+i] >> 16);
+                  if(buffer_last_used == 0) {
+                                         av[i] += rmsValue(rx_buf_0, FRAME_LEN * 8, i);
+                  }else if (buffer_last_used == 1){
+                                         av[i] += rmsValue(rx_buf_1, FRAME_LEN * 8, i);
+
+                  }
                  }
 
 
-             }
-         }
+      //       }
+      //   }
 
-     gpiohs_set_pin(9, GPIO_PV_LOW);
 
-     i2s_receive_data_dma(I2S_DEVICE_0, &rx_buf[0], FRAME_LEN * 8, DMAC_CHANNEL1);
+    while(buffer_0_to_be_saved == 1 && buffer_1_to_be_saved == 1) {
+          gpiohs_set_pin(10, GPIO_PV_LOW); 
+          gpiohs_set_pin(9, GPIO_PV_LOW);
+          msleep(1);
+    }
+
+    gpiohs_set_pin(10, GPIO_PV_HIGH); 
+
+
+    gpiohs_set_pin(9, GPIO_PV_LOW);
+   
+   
+     if(!buffer_0_saving && !buffer_0_to_be_saved) {
+            i2s_receive_data_dma(I2S_DEVICE_0, &rx_buf_0[0], FRAME_LEN * 8, DMAC_CHANNEL1);
+            buffer_last_used = 0;
+            buffer_0_to_be_saved = 1;
+     }else if(!buffer_1_saving && !buffer_1_to_be_saved){
+            i2s_receive_data_dma(I2S_DEVICE_0, &rx_buf_1[0], FRAME_LEN * 8, DMAC_CHANNEL1);
+            buffer_last_used = 1;
+            buffer_1_to_be_saved = 1;
+     }
 
      gpiohs_set_pin(9, GPIO_PV_HIGH);
-
-     for (uint32_t i = 0; i < FRAME_LEN * 8; i++)
-     {
-                    file_buf[i] = (int16_t) (rx_buf[i] >> 16); //converts 32 bit integers with 0x0000 at the end to 16 bit
-                  }
-
-
-                  gpiohs_set_pin(10, GPIO_PV_LOW);
-
-
-
-                   // for (int buff_counter = 0 )
-                  ret = f_write(&file_channel_0,  (void *) file_buf, sizeof(file_buf), &v_ret_len);
-                  f_sync(&file_channel_0);
-                  if(ret != FR_OK)
-                  {
-                    printf("Write %s err[%d]\n", path_0, ret);
-                    while(1) {};
-                  }
-                  else
-                  {
-                    printf("Write %d bytes to %s ok\n", v_ret_len, path_0);
-                  }
-
-                  
-                  //}
-                  gpiohs_set_pin(10, GPIO_PV_HIGH);
-
-
-
-                    // correct for the number of samples taken
-                  for (int i=0; i<8; i++) {
-                    av[i] = (int) ((float)av[i]*if_samples);
-                    if (av[i]>512) av[i]=512;
-                  }
-
-
-
-
-
 
 
 
        /* if only noise is present (a low central microphone output), set all array mic averages to 0.
         else subract the central microphone output from the other array mics, and make sure that their 
         value is between 0 and 255.*/
-                  if (av[1] > 10) {
-                    for (int i=2; i<8; i++) {
-                      av[i] -= av[1]/2;
-                      if (av[i]<0) av[i] = 0;
-                      if (av[i]>512) av[i]=512;
-                    }
-                  } else {
-                    for (int i=2; i<8; i++) av[i] = 0;
-                  }
-
-
-
-
+                  // if (av[1] > 10) {
+                  //   for (int i=2; i<8; i++) {
+                  //     av[i] -= av[1]/2;
+                  //     if (av[i]<0) av[i] = 0;
+                  //     if (av[i]>512) av[i]=512;
+                  //   }
+                  // } else {
+//                    for (int i=2; i<8; i++) av[i] = 0;
+//                  }
 
 
 
@@ -271,40 +351,41 @@ int main(void)
                 x = av[3] * icos(0.0-90.) + av[4] * icos(60.-90.) + av[5] * icos(120-90.) + av[6] * icos(180-90)  + av[7] * icos(240-90) + av[2] * icos(300-90);
                 y = av[3] * isin(0.0-90.) + av[4] * isin(60.-90.) + av[5] * isin(120-90.) + av[6] * isin(180-90)  + av[7] * isin(240-90) + av[2] * isin(300-90);
 
+                angle = atan2(y,x);
 
-                if( x > 0 && ( y > -10 || y < 10) ) {
+
+                if( angle >= 2.4f ) {
                   move_forward();
-                }else if( x < -10 && ( y > -10 || y < 10) ) {
+                //  printf("F1 %f\n\r", angle);
+                }
+                 else if( angle <= -2.4f ) {
+                  move_forward();
+                //  printf("F2 %f\n\r", angle);
+                }else if( (angle > -0.5f && angle < 0.0f)  || (angle < 0.5f && angle > 0.0f) ) {
+                //  printf("B %f\n\r", angle);
                   move_backward();
-                }else if( x > 0 && y > 0 ) {
-                  turn_right();
-                }else if(x > 0 && y < 0) {
+                }else if( angle > 0.0f && angle < 2.4f) {
+                 // printf("R %f\n\r", angle);
+                 turn_right();
+                }else if( angle < 0.0f  && angle > -2.4f) {
+                // printf("L %f\n\r", angle);
                   turn_left();
-                }else if(x < 0 && y > 0) {
-                  turn_right();
-
-                }else if(x < 0 && y < 0) {
-                  turn_left();
-
                 }else {
+                 // printf("S %f\n\r", angle);
                   stop();
                 }
 
 
-         printf("mB=%d\tmC=%d\tm1=%d\tm2=%d\tm3=%d\tm4=%d\tm5=%d\tm6=%d\n\r", av[0], av[1], av[2], av[3], av[4], av[5], av[6], av[7]);
-
-
 
             // set the LEDs to white with brightness according to their average microphone output
-            // set_light(8, av[2], av[2], av[2]);
-            // set_light(10, av[3], av[3], av[3]);
-            // set_light(6, av[4], av[4], av[4]);
-            // set_light(4, av[5], av[5], av[5]);
-            // set_light(0, av[6], av[6], av[6]);
-            // set_light(2, av[7], av[7], av[7]);
-            // write_pixels();
+             set_light(8, av[2], av[2], av[2]);
+             set_light(10, av[3], av[3], av[3]);
+             set_light(6, av[4], av[4], av[4]);
+             set_light(4, av[5], av[5], av[5]);
+             set_light(0, av[6], av[6], av[6]);
+             set_light(2, av[7], av[7], av[7]);
+             write_pixels();
               }
-              f_close(&file_channel_0);
 
               return 0;
             }
