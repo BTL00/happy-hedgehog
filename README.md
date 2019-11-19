@@ -19,3 +19,6 @@
   549  history | tail -n15 >> ../README.md
   
   ```
+## TODO:
+- add multiple buffers
+- try with FreeRTOS sdk and more tasks to optimize performanc
