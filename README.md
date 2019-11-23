@@ -14,7 +14,7 @@ microphones. The final prototype is very easy to use. You basically talk and it 
 ![Method](/images/method.png "")
 
 **Software algorithm:**
-![Algorithm - alt](\algorithm.png "")
+![Algorithm](\images\algorithm.png "")
 - initialize all 4 I2S channels, stereo -> 7 microphones
 i2s_init(I2S_DEVICE_0, I2S_RECEIVER, 0xFF)
 - set averages to zero to start
