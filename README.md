@@ -1,5 +1,5 @@
 # Happy hedgehog  
-This is the code for the student project of sound following toy. 
+This is the code for the student project of sound following toy. Aim of the project was to design and create a code for our prototype a of interactive, voice following toy. Moving toy is characterized by its ability to follow the voice of the kid with the use of 7 microphone array. In our project it is assumed that it will follow the loudest sound, not specific voice command.
 
 ## Requirements
 ## Description
@@ -43,3 +43,11 @@ i2s_init(I2S_DEVICE_0, I2S_RECEIVER, 0xFF)
 ## TODO:
 - add multiple buffers
 - try with FreeRTOS sdk and more tasks to optimize performanc
+
+## Futher reasearch
+Eventually, the project can be considered as a success.All the aims were fulfilled.
+The prototype is working. Of course project could be developed furthermore, as was planned at the beginning. App can be attached to control the movement of robot from your phone. We are quite satisfied with the results obtained.  Current state of the prototype is satisfactory, but can be improved in the future.
+
+## Webpage
+Additionally we created webpage for our hedgehog http://happyhedgehog.pl/
+
