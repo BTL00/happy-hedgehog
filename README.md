@@ -45,9 +45,15 @@ i2s_init(I2S_DEVICE_0, I2S_RECEIVER, 0xFF)
 - try with FreeRTOS sdk and more tasks to optimize performanc
 
 ## Futher reasearch
-Eventually, the project can be considered as a success.All the aims were fulfilled.
+Eventually, the project can be considered as a success. All the aims were fulfilled.
 The prototype is working. Of course project could be developed furthermore, as was planned at the beginning. App can be attached to control the movement of robot from your phone. We are quite satisfied with the results obtained.  Current state of the prototype is satisfactory, but can be improved in the future.
 
 ## Webpage
 Additionally we created webpage for our hedgehog http://happyhedgehog.pl/
+![alt test](images/webpage.PNG)
+
+## Authors
+##### Piotr Bomba
+##### Joanna Bujak
+##### Magdalena Hadała
 
