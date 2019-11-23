@@ -10,8 +10,14 @@ added DC to DC converter and bridge-H (h-bridge) from Pololu based on Toshiba
 chip (TB6612) and a board with 12 addressable diodes and 7 digital i2s
 microphones. The final prototype is very easy to use. You basically talk and it comes to you.
 
-Signal analysis part is based on the geometrical transformation method. 
-![Test Image 2]("method.png")
+**Signal analysis part** is based on the geometrical transformation method. 
+**Software algorithm:**
+- initialize all 4 I2S channels, stereo -> 7 microphones
+i2s_init(I2S_DEVICE_0, I2S_RECEIVER, 0xFF)
+- set averages to zero to start
+- read the samples of the 7 mics from the rx_buffer
+- if only noise is present (a low central microphone output), set all array mic averages to 0. Else subtract the central microphone output from the other array mics, and make sure that their value is between 0 and 512
+- move in direction designated by the loudest sound
 
 ## Various useful stuff
   ```535  mkdir build && cd build
