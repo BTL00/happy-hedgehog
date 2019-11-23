@@ -11,7 +11,7 @@ chip (TB6612) and a board with 12 addressable diodes and 7 digital i2s
 microphones. The final prototype is very easy to use. You basically talk and it comes to you.
 
 **Signal analysis part** is based on the geometrical transformation method. 
-![Method - alt](/images/method.png "")
+![Method](/images/method.png "")
 
 **Software algorithm:**
 ![Algorithm - alt](\algorithm.png "")
