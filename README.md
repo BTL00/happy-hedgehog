@@ -1,4 +1,17 @@
 # Happy hedgehog  
+This is the code for the student project of sound following toy. 
+
+## Requirements
+## Description
+Device was based on the newly created Sipeed platform, exactly on the Maix Bit
+module due to the fact that this equipment was created for audio analysis and has
+hardware interfaces i2s, dma, and hardware accelerated FFT. For this we have
+added DC to DC converter and bridge-H (h-bridge) from Pololu based on Toshiba
+chip (TB6612) and a board with 12 addressable diodes and 7 digital i2s
+microphones. The final prototype is very easy to use. You basically talk and it comes to you.
+
+Signal analysis part is based on the geometrical transformation method. 
+![RMS - alt](C:/Users/magda/OneDrive/Pulpit/method.jpg "")
 
 
 ## Various useful stuff
