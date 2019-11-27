@@ -217,6 +217,33 @@ src/hello_world/ff.c.s:
 	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/ff.c.s
 .PHONY : src/hello_world/ff.c.s
 
+src/hello_world/lcd.obj: src/hello_world/lcd.c.obj
+
+.PHONY : src/hello_world/lcd.obj
+
+# target to build an object file
+src/hello_world/lcd.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj
+.PHONY : src/hello_world/lcd.c.obj
+
+src/hello_world/lcd.i: src/hello_world/lcd.c.i
+
+.PHONY : src/hello_world/lcd.i
+
+# target to preprocess a source file
+src/hello_world/lcd.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/lcd.c.i
+.PHONY : src/hello_world/lcd.c.i
+
+src/hello_world/lcd.s: src/hello_world/lcd.c.s
+
+.PHONY : src/hello_world/lcd.s
+
+# target to generate assembly for a file
+src/hello_world/lcd.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/lcd.c.s
+.PHONY : src/hello_world/lcd.c.s
+
 src/hello_world/main.obj: src/hello_world/main.c.obj
 
 .PHONY : src/hello_world/main.obj
@@ -270,6 +297,33 @@ src/hello_world/movement.s: src/hello_world/movement.c.s
 src/hello_world/movement.c.s:
 	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/movement.c.s
 .PHONY : src/hello_world/movement.c.s
+
+src/hello_world/nt35310.obj: src/hello_world/nt35310.c.obj
+
+.PHONY : src/hello_world/nt35310.obj
+
+# target to build an object file
+src/hello_world/nt35310.c.obj:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj
+.PHONY : src/hello_world/nt35310.c.obj
+
+src/hello_world/nt35310.i: src/hello_world/nt35310.c.i
+
+.PHONY : src/hello_world/nt35310.i
+
+# target to preprocess a source file
+src/hello_world/nt35310.c.i:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.i
+.PHONY : src/hello_world/nt35310.c.i
+
+src/hello_world/nt35310.s: src/hello_world/nt35310.c.s
+
+.PHONY : src/hello_world/nt35310.s
+
+# target to generate assembly for a file
+src/hello_world/nt35310.c.s:
+	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.s
+.PHONY : src/hello_world/nt35310.c.s
 
 src/hello_world/sdcard.obj: src/hello_world/sdcard.c.obj
 
@@ -371,12 +425,18 @@ help:
 	@echo "... src/hello_world/ff.obj"
 	@echo "... src/hello_world/ff.i"
 	@echo "... src/hello_world/ff.s"
+	@echo "... src/hello_world/lcd.obj"
+	@echo "... src/hello_world/lcd.i"
+	@echo "... src/hello_world/lcd.s"
 	@echo "... src/hello_world/main.obj"
 	@echo "... src/hello_world/main.i"
 	@echo "... src/hello_world/main.s"
 	@echo "... src/hello_world/movement.obj"
 	@echo "... src/hello_world/movement.i"
 	@echo "... src/hello_world/movement.s"
+	@echo "... src/hello_world/nt35310.obj"
+	@echo "... src/hello_world/nt35310.i"
+	@echo "... src/hello_world/nt35310.s"
 	@echo "... src/hello_world/sdcard.obj"
 	@echo "... src/hello_world/sdcard.i"
 	@echo "... src/hello_world/sdcard.s"

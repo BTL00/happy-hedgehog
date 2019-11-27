@@ -136,6 +136,8 @@ platform.h
 plic.h
 ../lib/drivers/include/plic.h
 
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/board_config.h
+
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ccsbcs.c
 ff.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
@@ -166,10 +168,32 @@ ffconf.h
 
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ffconf.h
 
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/font.h
+stdint.h
+-
+
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/integer.h
 windows.h
 -
 tchar.h
+-
+
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.c
+string.h
+-
+unistd.h
+-
+lcd.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.h
+nt35310.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.h
+font.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/font.h
+board_config.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/board_config.h
+
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.h
+stdint.h
 -
 
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/main.c
@@ -191,8 +215,6 @@ fpioa.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/fpioa.h
 uarths.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/uarths.h
-mic_array_leds.h
-/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/mic_array_leds.h
 gpiohs.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/gpiohs.h
 bsp.h
@@ -201,16 +223,24 @@ dmac.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/dmac.h
 fpioa.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/fpioa.h
-sdcard.h
-/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.h
-ff.h
-/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
 plic.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/plic.h
 movement.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/movement.h
 supplementary.h
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/supplementary.h
+mic_array_leds.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/mic_array_leds.h
+sdcard.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.h
+ff.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
+lcd.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.h
+nt35310.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.h
+board_config.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/board_config.h
 
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/mic_array_leds.h
 unistd.h
@@ -231,6 +261,20 @@ stdlib.h
 -
 
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/movement.h
+
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.c
+nt35310.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.h
+gpiohs.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/gpiohs.h
+spi.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/spi.h
+board_config.h
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/board_config.h
+
+/Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.h
+stdint.h
+-
 
 /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.c
 sdcard.h

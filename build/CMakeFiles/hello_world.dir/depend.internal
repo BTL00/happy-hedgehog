@@ -17,6 +17,12 @@ CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ffconf.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/integer.h
+CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/board_config.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/font.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.c
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.h
 CMakeFiles/hello_world.dir/src/hello_world/main.c.obj
  ../lib/bsp/include/atomic.h
  ../lib/bsp/include/bsp.h
@@ -36,12 +42,15 @@ CMakeFiles/hello_world.dir/src/hello_world/main.c.obj
  ../lib/drivers/include/spi.h
  ../lib/drivers/include/sysctl.h
  ../lib/drivers/include/uarths.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/board_config.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ffconf.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/integer.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/main.c
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/mic_array_leds.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/movement.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/supplementary.h
 CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj
@@ -51,6 +60,18 @@ CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj
  ../lib/drivers/include/gpiohs.h
  ../lib/drivers/include/plic.h
  /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/movement.c
+CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj
+ ../lib/bsp/include/encoding.h
+ ../lib/bsp/include/platform.h
+ ../lib/drivers/include/dmac.h
+ ../lib/drivers/include/gpio_common.h
+ ../lib/drivers/include/gpiohs.h
+ ../lib/drivers/include/io.h
+ ../lib/drivers/include/plic.h
+ ../lib/drivers/include/spi.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/board_config.h
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.c
+ /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.h
 CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj
  ../lib/bsp/include/encoding.h
  ../lib/bsp/include/platform.h

@@ -15,6 +15,10 @@
  * limitations under the License.
  */
 
+//#define SDCARD_RECORD
+//#define DISP_LEDS
+
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -24,23 +28,35 @@
 #include "sysctl.h"
 #include "fpioa.h"
 #include "uarths.h"
-#include "mic_array_leds.h"
 #include "gpiohs.h"
 #include "bsp.h"
 #include "dmac.h"
 #include "fpioa.h"
-#include "sdcard.h"
-#include "ff.h"
 #include "plic.h"
 #include "movement.h" //my file
 #include "supplementary.h" //my file
+
+#ifdef SDCARD_RECORD
+
+#include "mic_array_leds.h"
+#include "sdcard.h"
+#include "ff.h"
+#else
+#include "lcd.h"
+#include "nt35310.h"
+#include "board_config.h"
+
+#endif
+
+char disp_line[4][32];
+char direction = 'S';
 
 
 #define FRAME_LEN   4096
 #define BUFFER_LEN 32768
 #define PI 3.14159265
 
-
+double sum_of_rms = 0;
 
 uint32_t rx_buf_0[32768];
 uint32_t rx_buf_1[32768];
@@ -60,19 +76,26 @@ void io_mux_init(){   // assign functions to pins
     // the data clock
   fpioa_set_function(18, FUNC_I2S0_SCLK);
 
-  fpioa_set_function(1, FUNC_GPIOHS1);
-  fpioa_set_function(2, FUNC_GPIOHS2);
-  fpioa_set_function(3, FUNC_GPIOHS3);
-  fpioa_set_function(4, FUNC_GPIOHS4);
+  fpioa_set_function(6, FUNC_GPIOHS3);
+  fpioa_set_function(7, FUNC_GPIOHS4);
+  fpioa_set_function(8, FUNC_GPIOHS5);
+  fpioa_set_function(9, FUNC_GPIOHS6);
 
 
      // SD CARD INIT for maix bit
-  fpioa_set_function(27, FUNC_SPI0_SCLK);
-  fpioa_set_function(26, FUNC_SPI0_D1);
-  fpioa_set_function(28, FUNC_SPI0_D0);
-  fpioa_set_function(29, FUNC_GPIOHS7);
-  gpiohs_set_drive_mode(29, GPIO_DM_OUTPUT);
+  #ifdef SDCARD_RECORD
+    fpioa_set_function(27, FUNC_SPI0_SCLK);
+    fpioa_set_function(26, FUNC_SPI0_D1);
+    fpioa_set_function(28, FUNC_SPI0_D0);
+    fpioa_set_function(29, FUNC_GPIOHS7);
+    gpiohs_set_drive_mode(29, GPIO_DM_OUTPUT);
+  #else
+    fpioa_set_function(38, FUNC_GPIOHS0 + DCX_GPIONUM);
+    fpioa_set_function(36, FUNC_SPI0_SS3);
+    fpioa_set_function(39, FUNC_SPI0_SCLK);
+    sysctl_set_spi0_dvp_data(1);
 
+  #endif
 
   fpioa_set_function(12, FUNC_GPIOHS10);
   gpiohs_set_drive_mode(10, GPIO_DM_OUTPUT);
@@ -80,6 +103,72 @@ void io_mux_init(){   // assign functions to pins
   fpioa_set_function(13, FUNC_GPIOHS9);
   gpiohs_set_drive_mode(9, GPIO_DM_OUTPUT);
 
+}
+void drawline(int x0, int y0, int x1, int y1, uint32_t color)
+{
+    int dx, dy, p, x, y;
+ 
+  dx=x1-x0;
+  dy=y1-y0;
+ 
+  x=x0;
+  y=y0;
+ 
+  p=2*dy-dx;
+ 
+  while(x<x1)
+  {
+    if(p>=0)
+    {
+      lcd_draw_point(x,y,color);
+      y=y+1;
+      p=p+2*dy-2*dx;
+    }
+    else
+    {
+      lcd_draw_point(x,y,color);
+      p=p+2*dy;
+    }
+    x=x+1;
+  }
+}
+
+double absd(double d) {
+if(d > 0.) return d;
+else return -d;
+
+}
+
+
+void drawcircle(int x0, int y0, int radius, uint32_t color)
+{
+    int x = radius;
+    int y = 0;
+    int err = 0;
+ 
+    while (x >= y)
+    {
+  lcd_draw_point(x0 + x, y0 + y, color);
+  lcd_draw_point(x0 + y, y0 + x, color);
+  lcd_draw_point(x0 - y, y0 + x, color);
+  lcd_draw_point(x0 - x, y0 + y, color);
+  lcd_draw_point(x0 - x, y0 - y, color);
+  lcd_draw_point(x0 - y, y0 - x, color);
+  lcd_draw_point(x0 + y, y0 - x, color);
+  lcd_draw_point(x0 + x, y0 - y, color);
+ 
+  if (err <= 0)
+  {
+      y += 1;
+      err += 2*y + 1;
+  }
+ 
+  if (err > 0)
+  {
+      x -= 1;
+      err -= 2*x + 1;
+  }
+    }
 }
 
 
@@ -121,6 +210,7 @@ int buffer_last_used = 0;
 
 
 int core1_function(void * ctx) {
+    #ifdef SDCARD_RECORD
 
     FIL  file_channel_0;
 
@@ -177,9 +267,9 @@ int core1_function(void * ctx) {
 
 
 
-
     }
                   f_close(&file_channel_0);
+    #endif
 
 return 0;
 
@@ -194,6 +284,9 @@ int main(void)
     sysctl_pll_set_freq(SYSCTL_PLL2, 45158400UL); //has to be compatible with 44100
     uarths_init();
     io_mux_init();
+
+
+
     dmac_init();
     plic_init();
     sysctl_enable_irq();
@@ -202,31 +295,43 @@ int main(void)
 
     /* Prepare GPIO for TB6612 */
 
-    prepare_gpio_for_tb6612();
+    // prepare_gpio_for_tb6612();
+
+    #ifdef SDCARD_RECORD
 
 
+        if(sdcard_init())
+        {
+          printf("SD card err\n");
+          return -1;
+        }
 
-
-    if(sdcard_init())
-    {
-      printf("SD card err\n");
-      return -1;
-    }
-
-    if(fs_init())
-    {
-      printf("FAT32 err\n");
-      return -1;
-    }
-
-
-
-
+        if(fs_init())
+        {
+          printf("FAT32 err\n");
+          return -1;
+        }
 
     // initialize the LEDs, and set them initially to off
     init_mic_array_lights();
     printf("Lights initilized\n");
     for (int l=0; l<12; l++) set_light(l, 0, 0, 0);
+
+    #else
+    sysctl_set_power_mode(SYSCTL_POWER_BANK6, SYSCTL_POWER_V18);
+    sysctl_set_power_mode(SYSCTL_POWER_BANK7, SYSCTL_POWER_V18);
+        sleep(1);
+        lcd_init();
+            lcd_set_direction(DIR_XY_LRDU);
+
+        sleep(1);
+        lcd_clear(BLACK);
+        sleep(1);
+        lcd_draw_string(16, 16, "Display initialized", BLUE);
+
+    #endif
+
+
 
     // initialize all 4 I2S channels, stereo -> 8 microphones
     i2s_init(I2S_DEVICE_0, I2S_RECEIVER, 0xFF);
@@ -292,6 +397,13 @@ int main(void)
              // read the samples of the 8 mics from the rx_buffer
 
       //       for (int f=0; f<FRAME_LEN; f++) {
+
+
+
+    #ifdef SDCARD_RECORD
+
+
+
                  for (int i=0; i<8; i++) {
                   if(buffer_last_used == 0) {
                                          av[i] += rmsValue(rx_buf_0, FRAME_LEN * 8, i);
@@ -317,6 +429,7 @@ int main(void)
 
     gpiohs_set_pin(9, GPIO_PV_LOW);
    
+   // stop();
    
      if(!buffer_0_saving && !buffer_0_to_be_saved) {
             i2s_receive_data_dma(I2S_DEVICE_0, &rx_buf_0[0], FRAME_LEN * 8, DMAC_CHANNEL1);
@@ -330,22 +443,27 @@ int main(void)
 
      gpiohs_set_pin(9, GPIO_PV_HIGH);
 
+#else
+            sum_of_rms = 0;
+            for (int i=0; i<8; i++) {
+                   av[i] += rmsValue(rx_buf_0, FRAME_LEN * 8, i);
+                    sum_of_rms +=av[i];
+                 }
 
 
-       /* if only noise is present (a low central microphone output), set all array mic averages to 0.
-        else subract the central microphone output from the other array mics, and make sure that their 
-        value is between 0 and 255.*/
-                  // if (av[1] > 10) {
-                  //   for (int i=2; i<8; i++) {
-                  //     av[i] -= av[1]/2;
-                  //     if (av[i]<0) av[i] = 0;
-                  //     if (av[i]>512) av[i]=512;
-                  //   }
-                  // } else {
-//                    for (int i=2; i<8; i++) av[i] = 0;
-//                  }
+
+    gpiohs_set_pin(10, GPIO_PV_HIGH); 
+    gpiohs_set_pin(9, GPIO_PV_LOW);
+   
+   // stop();
+   
+            i2s_receive_data_dma(I2S_DEVICE_0, &rx_buf_0[0], FRAME_LEN * 8, DMAC_CHANNEL1);
+
+     gpiohs_set_pin(9, GPIO_PV_HIGH);
 
 
+
+     #endif
 
 
                 x = av[3] * icos(0.0-90.) + av[4] * icos(60.-90.) + av[5] * icos(120-90.) + av[6] * icos(180-90)  + av[7] * icos(240-90) + av[2] * icos(300-90);
@@ -354,30 +472,64 @@ int main(void)
                 angle = atan2(y,x);
 
 
+                sprintf(disp_line[0], "x: %.3lf, y: %.3lf", x, y );
+                 sprintf(disp_line[1], "a: %.3lf, r: %.3lf", angle, sum_of_rms );
+
+                lcd_clear(BLACK);
+                lcd_draw_string(16,16,disp_line[0], RED);
+                lcd_draw_string(16,32,disp_line[1], RED);
+
+
+
+                drawcircle(121,160, 5, RED);
+
+                drawcircle(121+y*3,160+x*3, sum_of_rms/20, BLUE);
+
+
+
+
                 if( angle >= 2.4f ) {
                   move_forward();
+                                  lcd_draw_string(16,64,"F", RED);
+
                 //  printf("F1 %f\n\r", angle);
                 }
                  else if( angle <= -2.4f ) {
                   move_forward();
+                                                    lcd_draw_string(16,64,"F", RED);
+
                 //  printf("F2 %f\n\r", angle);
                 }else if( (angle > -0.5f && angle < 0.0f)  || (angle < 0.5f && angle > 0.0f) ) {
                 //  printf("B %f\n\r", angle);
+                                                    lcd_draw_string(16,64,"B", RED);
+
                   move_backward();
                 }else if( angle > 0.0f && angle < 2.4f) {
                  // printf("R %f\n\r", angle);
+                                                    lcd_draw_string(16,64,"R", RED);
+
                  turn_right();
                 }else if( angle < 0.0f  && angle > -2.4f) {
                 // printf("L %f\n\r", angle);
+                                                    lcd_draw_string(16,64,"L", RED);
+
                   turn_left();
                 }else {
                  // printf("S %f\n\r", angle);
+                                                    lcd_draw_string(16,64,"S", YELLOW);
+
                   stop();
                 }
 
 
 
+
+
+
+
+
             // set the LEDs to white with brightness according to their average microphone output
+            #ifdef DISP_LEDS
              set_light(8, av[2], av[2], av[2]);
              set_light(10, av[3], av[3], av[3]);
              set_light(6, av[4], av[4], av[4]);
@@ -385,6 +537,7 @@ int main(void)
              set_light(0, av[6], av[6], av[6]);
              set_light(2, av[7], av[7], av[7]);
              write_pixels();
+             #endif
               }
 
               return 0;

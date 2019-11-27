@@ -96,9 +96,22 @@ CMakeFiles/hello_world.dir/src/hello_world/ff.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hello_world.dir/src/hello_world/ff.c.s"
 	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/ff.c -o CMakeFiles/hello_world.dir/src/hello_world/ff.c.s
 
+CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj: CMakeFiles/hello_world.dir/flags.make
+CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj: ../src/hello_world/lcd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj"
+	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.c
+
+CMakeFiles/hello_world.dir/src/hello_world/lcd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hello_world.dir/src/hello_world/lcd.c.i"
+	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.c > CMakeFiles/hello_world.dir/src/hello_world/lcd.c.i
+
+CMakeFiles/hello_world.dir/src/hello_world/lcd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hello_world.dir/src/hello_world/lcd.c.s"
+	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/lcd.c -o CMakeFiles/hello_world.dir/src/hello_world/lcd.c.s
+
 CMakeFiles/hello_world.dir/src/hello_world/main.c.obj: CMakeFiles/hello_world.dir/flags.make
 CMakeFiles/hello_world.dir/src/hello_world/main.c.obj: ../src/hello_world/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/hello_world.dir/src/hello_world/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/hello_world.dir/src/hello_world/main.c.obj"
 	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world/main.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/main.c
 
 CMakeFiles/hello_world.dir/src/hello_world/main.c.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/hello_world.dir/src/hello_world/main.c.s: cmake_force
 
 CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj: CMakeFiles/hello_world.dir/flags.make
 CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj: ../src/hello_world/movement.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj"
 	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/movement.c
 
 CMakeFiles/hello_world.dir/src/hello_world/movement.c.i: cmake_force
@@ -122,9 +135,22 @@ CMakeFiles/hello_world.dir/src/hello_world/movement.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hello_world.dir/src/hello_world/movement.c.s"
 	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/movement.c -o CMakeFiles/hello_world.dir/src/hello_world/movement.c.s
 
+CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj: CMakeFiles/hello_world.dir/flags.make
+CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj: ../src/hello_world/nt35310.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj"
+	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.c
+
+CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.i"
+	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.c > CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.i
+
+CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.s"
+	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/nt35310.c -o CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.s
+
 CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj: CMakeFiles/hello_world.dir/flags.make
 CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj: ../src/hello_world/sdcard.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj"
 	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/sdcard.c
 
 CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.i: cmake_force
@@ -137,7 +163,7 @@ CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.s: cmake_force
 
 CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj: CMakeFiles/hello_world.dir/flags.make
 CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj: ../src/hello_world/supplementary.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj"
 	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/supplementary.c
 
 CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.i: cmake_force
@@ -150,7 +176,7 @@ CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.s: cmake_force
 
 CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj: CMakeFiles/hello_world.dir/flags.make
 CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj: ../src/hello_world/wav_decode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj"
 	/usr/local/riscv/bin/riscv64-unknown-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj   -c /Users/pb/Desktop/Riscv/happy-hedgehog/src/hello_world/wav_decode.c
 
 CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.i: cmake_force
@@ -166,8 +192,10 @@ hello_world_OBJECTS = \
 "CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.obj" \
 "CMakeFiles/hello_world.dir/src/hello_world/diskio.c.obj" \
 "CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj" \
+"CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj" \
 "CMakeFiles/hello_world.dir/src/hello_world/main.c.obj" \
 "CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj" \
+"CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj" \
 "CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj" \
 "CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj" \
 "CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj"
@@ -178,15 +206,17 @@ hello_world_EXTERNAL_OBJECTS =
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/ccsbcs.c.obj
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/diskio.c.obj
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/ff.c.obj
+hello_world: CMakeFiles/hello_world.dir/src/hello_world/lcd.c.obj
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/main.c.obj
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/movement.c.obj
+hello_world: CMakeFiles/hello_world.dir/src/hello_world/nt35310.c.obj
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/sdcard.c.obj
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/supplementary.c.obj
 hello_world: CMakeFiles/hello_world.dir/src/hello_world/wav_decode.c.obj
 hello_world: CMakeFiles/hello_world.dir/build.make
 hello_world: lib/libkendryte.a
 hello_world: CMakeFiles/hello_world.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable hello_world"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/pb/Desktop/Riscv/happy-hedgehog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable hello_world"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello_world.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating .bin file ..."
 	/usr/local/riscv/bin/riscv64-unknown-elf-objcopy --output-format=binary /Users/pb/Desktop/Riscv/happy-hedgehog/build/hello_world /Users/pb/Desktop/Riscv/happy-hedgehog/build/hello_world.bin
