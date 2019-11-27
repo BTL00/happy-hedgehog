@@ -275,8 +275,7 @@ return 0;
 
 }
 
-
-
+uint16_t colorarr[] = {63488, 63520, 63552, 63616, 63648, 63712, 63744, 63808, 63840, 63904, 63936, 64000, 64032, 64096, 64128, 64192, 64224, 64288, 64320, 64384, 64416, 64480, 64512, 64576, 64608, 64672, 64704, 64768, 64800, 64832, 64896, 64928, 64992, 65024, 65088, 65120, 65184, 65216, 65280, 65312, 65376, 65408, 65472, 63456, 61408, 61408, 59360, 57312, 55264, 55264, 53216, 51168, 51168, 49120, 47072, 45024, 45024, 42976, 40928, 38880, 38880, 36832, 34784, 34784, 32736, 30688, 28640, 28640, 26592, 24544, 22496, 22496, 20448, 18400, 18400, 16352, 14304, 12256, 12256, 10208, 8160, 6112, 6112, 4064, 2016, 2016, 2016, 2017, 2018, 2018, 2019, 2020, 2021, 2021, 2022, 2023, 2024, 2024, 2025, 2026, 2026, 2027, 2028, 2029, 2029, 2030, 2031, 2032, 2032, 2033, 2034, 2034, 2035, 2036, 2037, 2037, 2038, 2039, 2040, 2040, 2041, 2042, 2042, 2043, 2044, 2045, 2045, 2046, 2015, 1951, 1919, 1855, 1823, 1759, 1727, 1663, 1631, 1567, 1535, 1471, 1439, 1375, 1343, 1311, 1247, 1215, 1151, 1119, 1055, 1023, 959, 927, 863, 831, 767, 735, 671, 639, 575, 543, 479, 447, 383, 351, 287, 255, 191, 159, 95, 63, 31, 31, 2079, 4127, 4127, 6175, 8223, 10271, 10271, 12319, 14367, 16415, 16415, 18463, 20511, 20511, 22559, 24607, 26655, 26655, 28703, 30751, 32799, 32799, 34847, 36895, 36895, 38943, 40991, 43039, 43039, 45087, 47135, 49183, 49183, 51231, 53279, 53279, 55327, 57375, 59423, 59423, 61471, 63518, 63517, 63517, 63516, 63515, 63514, 63514, 63513, 63512, 63512, 63511, 63510, 63509, 63509, 63508, 63507, 63506, 63506, 63505, 63504, 63504, 63503, 63502, 63501, 63501, 63500, 63499, 63498, 63498, 63497, 63496, 63496, 63495, 63494, 63493, 63493, 63492, 63491, 63490, 63490, 63489, 63488};
 int main(void)
 {
     sysctl_pll_set_freq(SYSCTL_PLL0, 800000000UL);
@@ -354,8 +353,8 @@ int main(void)
     float av[8]; 
     // int num_averages = 50;
     // float if_samples;
-    float x,y,angle; //angle
-
+    float x=0.,y=0.,angle=0.; //angle
+    float diff_x, diff_y, prev_x = 0, prev_y = 0;
     // inverse, float of the number of samples taken
     // if_samples = 1./(float)(num_averages * FRAME_LEN);
 
@@ -383,7 +382,8 @@ int main(void)
 
 
 
-
+    lcd_clear(BLACK);
+    uint16_t i =0;
     while (1)
     {
 
@@ -444,6 +444,10 @@ int main(void)
      gpiohs_set_pin(9, GPIO_PV_HIGH);
 
 #else
+
+
+        //        drawcircle(121-y*3,160+x*3, sum_of_rms/40, BLACK);
+
             sum_of_rms = 0;
             for (int i=0; i<8; i++) {
                    av[i] += rmsValue(rx_buf_0, FRAME_LEN * 8, i);
@@ -469,13 +473,29 @@ int main(void)
                 x = av[3] * icos(0.0-90.) + av[4] * icos(60.-90.) + av[5] * icos(120-90.) + av[6] * icos(180-90)  + av[7] * icos(240-90) + av[2] * icos(300-90);
                 y = av[3] * isin(0.0-90.) + av[4] * isin(60.-90.) + av[5] * isin(120-90.) + av[6] * isin(180-90)  + av[7] * isin(240-90) + av[2] * isin(300-90);
 
+
+                // if(x >= prev_x) diff_x = absd(x) - absd(prev_x);
+                // else  diff_x = absd(prev_x) - absd(x); 
+
+                // if(y >= prev_y) diff_y = absd(y) - absd(prev_y);
+                // else  diff_y = absd(prev_y) - absd(y); 
+
+                // if(diff_x > 2) x = (x + prev_x ) / 2;
+                // if(diff_y > 2) y = (y + prev_y ) / 2;
+
+
+                // prev_y = y;
+                // prev_x = x;
+
+
                 angle = atan2(y,x);
 
+                lcd_draw_string(16,16,disp_line[0], BLACK);
+                lcd_draw_string(16,32,disp_line[1], BLACK);
 
                 sprintf(disp_line[0], "x: %.3lf, y: %.3lf", x, y );
-                 sprintf(disp_line[1], "a: %.3lf, r: %.3lf", angle, sum_of_rms );
+                sprintf(disp_line[1], "a: %.3lf, r: %.3lf", angle, sum_of_rms );
 
-                lcd_clear(BLACK);
                 lcd_draw_string(16,16,disp_line[0], RED);
                 lcd_draw_string(16,32,disp_line[1], RED);
 
@@ -483,8 +503,21 @@ int main(void)
 
                 drawcircle(121,160, 5, RED);
 
-                drawcircle(121+y*3,160+x*3, sum_of_rms/20, BLUE);
+                if (i >= 255) i = 0;
+                drawcircle(121-y*2,160+x*2, sum_of_rms/20, colorarr[i++]);
 
+                                  lcd_draw_string(121,160 - 20,"F", GREEN);
+                                  lcd_draw_string(121,160 + 20,"B", GREEN);
+                                  lcd_draw_string(121 - 20,160,"L", GREEN);
+                                  lcd_draw_string(121 + 20,160,"R", GREEN);
+
+
+
+                                  lcd_draw_string(16,64,"F", BLACK);
+                                  lcd_draw_string(16,64,"L", BLACK);
+                                  lcd_draw_string(16,64,"R", BLACK);
+                                  lcd_draw_string(16,64,"B", BLACK);
+                                  lcd_draw_string(16,64,"S", BLACK);
 
 
 
@@ -506,14 +539,14 @@ int main(void)
                   move_backward();
                 }else if( angle > 0.0f && angle < 2.4f) {
                  // printf("R %f\n\r", angle);
-                                                    lcd_draw_string(16,64,"R", RED);
-
-                 turn_right();
-                }else if( angle < 0.0f  && angle > -2.4f) {
-                // printf("L %f\n\r", angle);
                                                     lcd_draw_string(16,64,"L", RED);
 
-                  turn_left();
+                 turn_left();
+                }else if( angle < 0.0f  && angle > -2.4f) {
+                // printf("L %f\n\r", angle);
+                                                    lcd_draw_string(16,64,"R", RED);
+
+                  turn_right();
                 }else {
                  // printf("S %f\n\r", angle);
                                                     lcd_draw_string(16,64,"S", YELLOW);
